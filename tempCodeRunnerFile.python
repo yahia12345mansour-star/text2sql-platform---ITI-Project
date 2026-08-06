@@ -1,0 +1,11 @@
+import psycopg2
+
+conn = psycopg2.connect(
+    host="localhost",
+    port=5432,
+    user="platform_admin",
+    password="platform_pass",
+    dbname="platform_db"
+)
+
+print("CONNECTED")

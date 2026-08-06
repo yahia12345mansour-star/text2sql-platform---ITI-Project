@@ -1,0 +1,27 @@
+# --- Web framework ---
+fastapi
+uvicorn[standard]
+python-multipart
+
+# --- Database ---
+sqlalchemy
+asyncpg
+greenlet
+
+# --- Auth & security ---
+python-jose[cryptography]
+passlib[bcrypt]
+cryptography
+
+# --- Settings ---
+pydantic
+pydantic-settings
+
+# --- SQL generation & validation ---
+sqlglot
+openai            # OpenAI-compatible client, pointed at Groq's API
+
+# --- Document chat / RAG ---
+pypdf
+fastembed         # local CPU embeddings (BAAI/bge-small-en-v1.5)
+qdrant-client
