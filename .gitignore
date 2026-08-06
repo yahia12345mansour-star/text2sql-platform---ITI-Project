@@ -1,6 +1,12 @@
-# Environment
+# Environment / secrets — never commit real credentials.
+# Note: .env is excluded but .env.example is intentionally kept (it's
+# just a template with no real values, useful for anyone cloning this).
 .env
-.env.*
+.env.local
+.env.production
+
+# Frontend is developed/versioned separately — not part of this repo.
+frontend/
 
 # Python
 venv/
@@ -10,13 +16,24 @@ __pycache__/
 *.pyo
 *.pyd
 .pytest_cache/
+*.egg-info/
 
-# Uploaded files
-uploaded_files/
+# Uploaded files (local runtime data, not source code)
+uploaded_files/*
+!uploaded_files/.gitkeep
 
-# IDE
+# IDE / editor junk
 .vscode/
 .idea/
+*.swp
+
+# OS junk
+.DS_Store
+Thumbs.db
 
 # Logs
 *.log
+
+# Stray local/temp files
+tempCodeRunnerFile.python
+*.bak
